@@ -1,0 +1,7 @@
+- [x] Remove Tailwind CSS and Animate.css from package.json
+- [x] Run npm install to update dependencies
+- [x] Simplify resources/css/app.css to basic styles
+- [x] Revert resources/views/sahil.blade.php to simple HTML without Tailwind, animations, and Google Fonts
+- [x] Revert resources/views/edit-post.blade.php to simple HTML
+- [x] Run npm run dev to compile assets
+- [x] Test the simple design
