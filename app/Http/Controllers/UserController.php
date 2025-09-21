@@ -17,9 +17,12 @@ class UserController extends Controller
         if(auth()->attempt(['name'=>$incomingFields['loginname'],
         'password'=>$incomingFields['loginpassword']])){
             $request->session()->regenerate();
+            return redirect('/');
         }
-        return redirect('/');
 
+        return back()->withErrors([
+            'loginname' => 'The provided credentials do not match our records.',
+        ])->onlyInput('loginname');
     }
     public function logout(Request $request){
         auth()->logout();
